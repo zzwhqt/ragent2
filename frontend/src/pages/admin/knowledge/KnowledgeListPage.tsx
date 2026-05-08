@@ -216,7 +216,7 @@ export function KnowledgeListPage() {
   const getCollectionBadgeClass = (name?: string) => {
     const value = (name || "").toLowerCase();
     if (value.includes("biz")) {
-      return "border-blue-200 bg-blue-50 text-blue-700";
+      return "border-orange-200 bg-orange-50 text-orange-700";
     }
     if (value.includes("group")) {
       return "border-purple-200 bg-purple-50 text-purple-700";

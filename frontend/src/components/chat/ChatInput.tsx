@@ -107,16 +107,16 @@ export function ChatInput() {
             className={cn(
               "absolute left-0 rounded-lg border px-3 py-1.5 text-xs font-medium transition-all",
               deepThinkingEnabled
-                ? "border-[#BFDBFE] bg-[#DBEAFE] text-[#2563EB]"
+                ? "border-[#FFD4B3] bg-[#FFF0E0] text-[#FF6A00]"
                 : "border-transparent bg-[#F5F5F5] text-[#999999] hover:bg-[#EEEEEE]",
               isStreaming && "cursor-not-allowed opacity-60"
             )}
           >
             <span className="inline-flex items-center gap-2">
-              <Brain className={cn("h-3.5 w-3.5", deepThinkingEnabled && "text-[#3B82F6]")} />
+              <Brain className={cn("h-3.5 w-3.5", deepThinkingEnabled && "text-[#FF6A00]")} />
               深度思考
               {deepThinkingEnabled ? (
-                <span className="h-2 w-2 rounded-full bg-[#3B82F6] animate-pulse" />
+                <span className="h-2 w-2 rounded-full bg-[#FF6A00] animate-pulse" />
               ) : null}
             </span>
           </button>
@@ -130,7 +130,7 @@ export function ChatInput() {
               isStreaming
                 ? "bg-[#FEE2E2] text-[#EF4444] hover:bg-[#FECACA]"
                 : hasContent
-                  ? "bg-[#3B82F6] text-white hover:bg-[#2563EB]"
+                  ? "bg-[#FF6A00] text-white hover:bg-[#E55A00]"
                   : "cursor-not-allowed bg-[#F5F5F5] text-[#CCCCCC]"
             )}
           >
@@ -139,7 +139,7 @@ export function ChatInput() {
         </div>
       </div>
       {deepThinkingEnabled ? (
-        <p className="text-xs text-[#2563EB]">
+        <p className="text-xs text-[#FF6A00]">
           <span className="inline-flex items-center gap-1.5">
             <Lightbulb className="h-3.5 w-3.5" />
             深度思考模式已开启，AI将进行更深入的分析推理

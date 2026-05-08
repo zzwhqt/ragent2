@@ -87,7 +87,7 @@ function MetricItem({
     success: "text-emerald-600",
     error: "text-red-600",
     warning: "text-amber-600",
-    primary: "text-blue-600"
+    primary: "text-orange-600"
   };
 
   return (

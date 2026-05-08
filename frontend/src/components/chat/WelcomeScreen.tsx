@@ -129,7 +129,7 @@ export function WelcomeScreen() {
     <div className="relative flex min-h-full items-center justify-center overflow-hidden px-4 py-16 sm:px-6">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#F8FAFC] via-white to-[#EFF6FF]"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#FFF8F0] via-white to-[#FFF0E0]"
       />
       <div
         aria-hidden="true"
@@ -137,7 +137,7 @@ export function WelcomeScreen() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-32 right-[-40px] h-72 w-72 rounded-full bg-gradient-radial from-[#BFDBFE]/60 via-transparent to-transparent blur-3xl animate-float"
+        className="pointer-events-none absolute -top-32 right-[-40px] h-72 w-72 rounded-full bg-gradient-radial from-[#FFD4B3]/60 via-transparent to-transparent blur-3xl animate-float"
       />
       <div
         aria-hidden="true"
@@ -149,16 +149,16 @@ export function WelcomeScreen() {
           className="text-center opacity-0 animate-fade-up"
           style={{ animationFillMode: "both" }}
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-medium text-[#2563EB] shadow-sm">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-medium text-[#FF6A00] shadow-sm">
             <Bot className="h-3.5 w-3.5" />
-            RAG 智能问答
+            运动健康智能问答
           </span>
           <h1 className="mt-4 font-display text-4xl leading-tight tracking-tight text-[#111827] sm:text-5xl md:text-6xl">
-            把问题变成
-            <span className="text-gradient">清晰答案</span>
+            让运动更健康
+            <span className="text-gradient">让生活更精彩</span>
           </h1>
           <p className="mt-4 text-base text-[#4B5563] sm:text-lg">
-            结构化提问、知识检索与深度思考，一次对话给出可执行方案
+            智能运动分析、健康建议与训练指导，你的专属运动健康AI助手
           </p>
         </div>
 
@@ -170,7 +170,7 @@ export function WelcomeScreen() {
             className={cn(
               "relative flex flex-col rounded-3xl border border-white/70 bg-white/80 px-5 pt-4 pb-3 shadow-soft backdrop-blur-xl transition-all duration-200",
               isFocused
-                ? "border-[#BFDBFE] shadow-glow"
+                ? "border-[#FFD4B3] shadow-glow"
                 : "hover:border-[#D4D4D4]"
             )}
           >
@@ -213,16 +213,16 @@ export function WelcomeScreen() {
                 className={cn(
                   "rounded-full border px-3 py-1.5 text-xs font-medium transition-all",
                   deepThinkingEnabled
-                    ? "border-[#BFDBFE] bg-[#DBEAFE] text-[#2563EB]"
+                    ? "border-[#FFD4B3] bg-[#FFF0E0] text-[#FF6A00]"
                     : "border-transparent bg-[#F5F5F5] text-[#6B7280] hover:bg-[#EEEEEE]",
                   isStreaming && "cursor-not-allowed opacity-60"
                 )}
               >
                 <span className="inline-flex items-center gap-2">
-                  <Brain className={cn("h-3.5 w-3.5", deepThinkingEnabled && "text-[#3B82F6]")} />
+                  <Brain className={cn("h-3.5 w-3.5", deepThinkingEnabled && "text-[#FF6A00]")} />
                   深度思考
                   {deepThinkingEnabled ? (
-                    <span className="h-2 w-2 rounded-full bg-[#3B82F6] animate-pulse" />
+                    <span className="h-2 w-2 rounded-full bg-[#FF6A00] animate-pulse" />
                   ) : null}
                 </span>
               </button>
@@ -236,7 +236,7 @@ export function WelcomeScreen() {
                   isStreaming
                     ? "bg-[#FEE2E2] text-[#EF4444] hover:bg-[#FECACA]"
                     : hasContent
-                      ? "bg-[#3B82F6] text-white hover:bg-[#2563EB]"
+                      ? "bg-[#FF6A00] text-white hover:bg-[#E55A00]"
                       : "cursor-not-allowed bg-[#F5F5F5] text-[#CCCCCC]"
                 )}
               >
@@ -245,7 +245,7 @@ export function WelcomeScreen() {
             </div>
           </div>
           {deepThinkingEnabled ? (
-            <p className="mt-3 text-xs text-[#2563EB]">
+            <p className="mt-3 text-xs text-[#FF6A00]">
               <span className="inline-flex items-center gap-1.5">
                 <Lightbulb className="h-3.5 w-3.5" />
                 深度思考模式已开启，AI将进行更深入的分析推理
@@ -285,12 +285,12 @@ export function WelcomeScreen() {
                   onClick={() => applyPreset(preset.prompt)}
                   disabled={isStreaming}
                   className={cn(
-                    "group rounded-2xl border border-white/70 bg-white/70 p-4 text-left shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-[#BFDBFE] hover:shadow-md",
+                    "group rounded-2xl border border-white/70 bg-white/70 p-4 text-left shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-[#FFD4B3] hover:shadow-md",
                     isStreaming && "cursor-not-allowed opacity-60"
                   )}
                 >
                   <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EFF6FF] text-[#2563EB]">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF8F0] text-[#FF6A00]">
                       <Icon className="h-4 w-4" />
                     </span>
                     <div>
@@ -300,7 +300,7 @@ export function WelcomeScreen() {
                   </div>
                   <div className="mt-3 flex items-center gap-2 text-xs text-[#94A3B8]">
                     <span className="min-w-0 flex-1 truncate">推荐问法：{preset.prompt}</span>
-                    <ArrowUpRight className="h-3.5 w-3.5 text-[#CBD5F5] transition-colors group-hover:text-[#3B82F6]" />
+                    <ArrowUpRight className="h-3.5 w-3.5 text-[#FFD4B3] transition-colors group-hover:text-[#FF6A00]" />
                   </div>
                 </button>
               );

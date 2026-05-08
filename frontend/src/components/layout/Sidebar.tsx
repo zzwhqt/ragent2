@@ -170,11 +170,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       >
         <div className="border-b border-[#F0F0F0] pb-3">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#3B82F6]">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#FF6A00]">
               <Bot className="h-5 w-5 text-white" />
             </div>
             <div style={{ fontFamily: sessionTitleFont }}>
-              <p className="text-base font-semibold text-[#1A1A1A]">Ragent AI 智能体</p>
+              <p className="text-base font-semibold text-[#1A1A1A]">运动健康智能AI助手</p>
               <p className="text-xs text-[#999999]">Powered by AI</p>
             </div>
           </div>
@@ -192,7 +192,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <div className="relative">
               <div className="flex items-center justify-between px-1">
                 <span className="text-[11px] font-semibold text-[#94A3B8]">快速开始</span>
-                <span className="rounded-full bg-white/80 px-2 py-0.5 text-[10px] font-semibold text-[#2563EB]">
+                <span className="rounded-full bg-white/80 px-2 py-0.5 text-[10px] font-semibold text-[#FF6A00]">
                   新内容
                 </span>
               </div>
@@ -205,7 +205,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   onClose();
                 }}
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-[#60A5FA] to-[#2563EB] text-white shadow-[0_6px_14px_rgba(37,99,235,0.3)]">
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-[#FF8533] to-[#FF6A00] text-white shadow-[0_6px_14px_rgba(255,106,0,0.3)]">
                   <Plus className="h-4 w-4" />
                 </span>
                 <span className="flex-1">
@@ -216,7 +216,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               {user?.role === "admin" ? (
                 <button
                   type="button"
-                  className="mt-2 inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/70 px-3 py-1.5 text-xs font-semibold text-[#1D4ED8] transition-colors hover:bg-white"
+                  className="mt-2 inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/70 px-3 py-1.5 text-xs font-semibold text-[#FF6A00] transition-colors hover:bg-white"
                   onClick={() => {
                     window.open("/admin", "_blank");
                     onClose();
@@ -240,7 +240,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
                   placeholder="搜索对话..."
-                  className="h-10 w-full rounded-xl border border-[#E5E7EB] bg-[#F8FAFC] pl-9 pr-3 text-sm text-[#1F2937] placeholder:text-[#9CA3AF] focus:border-[#93C5FD] focus:outline-none transition-colors"
+                  className="h-10 w-full rounded-xl border border-[#E5E7EB] bg-[#FFF8F0] pl-9 pr-3 text-sm text-[#1F2937] placeholder:text-[#9CA3AF] focus:border-[#FFB380] focus:outline-none transition-colors"
                 />
               </div>
             </div>
@@ -276,7 +276,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         className={cn(
                           "group my-[1px] flex min-h-[40px] cursor-pointer items-center justify-between gap-2 rounded-lg px-3 py-2 text-[14px] leading-[22px] transition-colors duration-200",
                           currentSessionId === session.id
-                            ? "bg-[#DBEAFE] text-[#2563EB]"
+                            ? "bg-[#FFF0E0] text-[#FF6A00]"
                             : "text-[#333333] hover:bg-[#F5F5F5]"
                         )}
                         role="button"
@@ -317,7 +317,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                             onBlur={() => {
                               commitRename().catch(() => null);
                             }}
-                            className="h-6 flex-1 rounded-md border border-[#E5E5E5] bg-white px-2 text-[14px] leading-[22px] text-[#333333] focus:border-[#2563EB] focus:outline-none"
+                            className="h-6 flex-1 rounded-md border border-[#E5E5E5] bg-white px-2 text-[14px] leading-[22px] text-[#333333] focus:border-[#FF6A00] focus:outline-none"
                           />
                         ) : (
                           <span className="min-w-0 flex-1 truncate font-normal">
@@ -331,7 +331,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                               className={cn(
                                 "flex h-6 w-6 items-center justify-center rounded text-[#666666] transition-opacity duration-150 hover:bg-[rgba(0,0,0,0.06)]",
                                 currentSessionId === session.id
-                                  ? "pointer-events-auto opacity-100 text-[#2563EB]"
+                                  ? "pointer-events-auto opacity-100 text-[#FF6A00]"
                                   : "pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100"
                               )}
                               onClick={(event) => event.stopPropagation()}
@@ -389,7 +389,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 className="flex w-full items-center gap-2 rounded-lg p-2 text-left transition-colors hover:bg-[#F5F5F5] data-[state=open]:bg-[#EEEEEE]"
                 aria-label="用户菜单"
               >
-                <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#3B82F6] text-white">
+                <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-[#FF6A00] text-white">
                   {showAvatar ? (
                     <img
                       src={avatarUrl}

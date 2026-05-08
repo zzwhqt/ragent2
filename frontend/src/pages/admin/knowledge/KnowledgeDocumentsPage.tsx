@@ -486,7 +486,7 @@ export function KnowledgeDocumentsPage() {
                             onClick={() => handleToggleEnabled(doc)}
                             className={cn(
                               "relative inline-flex h-5 w-9 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
-                              enabled ? "bg-blue-600" : "bg-slate-200"
+                              enabled ? "bg-orange-600" : "bg-slate-200"
                             )}
                           >
                             <span
@@ -851,9 +851,9 @@ export function KnowledgeDocumentsPage() {
                       <div className="text-xs text-muted-foreground mb-1">其他</div>
                       <div className="text-lg font-semibold tabular-nums">{formatDuration(log.otherDuration)}</div>
                     </div>
-                    <div className="rounded-lg border bg-blue-50 p-3">
-                      <div className="text-xs text-blue-600 mb-1">总耗时</div>
-                      <div className="text-lg font-bold tabular-nums text-blue-600">{formatDuration(log.totalDuration)}</div>
+                    <div className="rounded-lg border bg-orange-50 p-3">
+                      <div className="text-xs text-orange-600 mb-1">总耗时</div>
+                      <div className="text-lg font-bold tabular-nums text-orange-600">{formatDuration(log.totalDuration)}</div>
                     </div>
                   </div>
 
@@ -1449,7 +1449,7 @@ function UploadDialog({ open, onOpenChange, onSubmit }: UploadDialogProps) {
                             onClick={handleNoChunkToggle}
                             className={cn(
                               "relative inline-flex h-5 w-9 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
-                              noChunk ? "bg-blue-600" : "bg-slate-200"
+                              noChunk ? "bg-orange-600" : "bg-slate-200"
                             )}
                           >
                             <span
